@@ -8,7 +8,7 @@ const { addValidation, ctrlWrapper } = require('../../middlewares');
 
 const router = express.Router();
 
-router.get('/', ctrlWrapper(users.get));
+router.post('/orders', ctrlWrapper(users.get));
 
 router.post('/', addValidation(joiSchema), ctrlWrapper(users.add));
 
